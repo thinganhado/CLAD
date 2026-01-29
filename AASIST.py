@@ -461,7 +461,7 @@ class Residual_block(nn.Module):
         if self.downsample:
             identity = self.conv_downsample(identity)
 
-        out += identity
+        out = out + identity
         out = self.mp(out)
         return out
 
